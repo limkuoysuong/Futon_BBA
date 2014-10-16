@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="nqZ-uy-NtN">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Main Game View Controller-->
+        <scene sceneID="gxu-Nk-JOJ">
+            <objects>
+                <viewController id="jPJ-if-ds0" customClass="mainGameViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9pl-AU-3RE"/>
+                        <viewControllerLayoutGuide type="bottom" id="IP6-9m-lwn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XSl-rv-B3t" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="szm-GQ-By6" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="374" y="-356"/>
+        </scene>
+        <!--Start Scene View Controller-->
+        <scene sceneID="bIS-GF-DQF">
+            <objects>
+                <viewController id="nqZ-uy-NtN" customClass="StartSceneViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="i90-dg-cfL"/>
+                        <viewControllerLayoutGuide type="bottom" id="gRq-B6-JeY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RKh-bg-rvi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q9V-GB-kwe">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" image="bg_start_3_5inch.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toSecond:" destination="nqZ-uy-NtN" eventType="touchUpInside" id="Ht7-1A-sWA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guG-YL-YhD">
+                                <rect key="frame" x="168" y="391" width="125" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" image="button_score.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="VDe-c3-bQD" kind="modal" id="tQT-9S-glX"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_tutorial.png" translatesAutoresizingMaskIntoConstraints="NO" id="FrR-Bb-SHp">
+                                <rect key="frame" x="20" y="144" width="280" height="230"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCk-Mw-osD">
+                                <rect key="frame" x="26" y="391" width="125" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" image="button_tutorial.png"/>
+                                <connections>
+                                    <action selector="TutorialButton:" destination="nqZ-uy-NtN" eventType="touchUpInside" id="VwJ-u5-oGR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qto-w7-rMh">
+                                <rect key="frame" x="120" y="318" width="80" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" image="button_tutorial_next.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="NextButton:" destination="nqZ-uy-NtN" eventType="touchUpInside" id="tp4-Sf-Y2p"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MzY-hE-LrL">
+                                <rect key="frame" x="262" y="126" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" image="button_tutorial_close.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="CloseButton:" destination="nqZ-uy-NtN" eventType="touchUpInside" id="eRk-bh-EH3"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tutorial01.png" translatesAutoresizingMaskIntoConstraints="NO" id="BiE-6M-0dw">
+                                <rect key="frame" x="55" y="170" width="210" height="140"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="PopUpTutorialView" destination="FrR-Bb-SHp" id="AoK-tr-r56"/>
+                        <outlet property="closeButton" destination="MzY-hE-LrL" id="X9W-H6-sgV"/>
+                        <outlet property="nextButton" destination="Qto-w7-rMh" id="MJw-82-b8d"/>
+                        <outlet property="scoreButton" destination="guG-YL-YhD" id="MZ9-MZ-081"/>
+                        <outlet property="startButton" destination="Q9V-GB-kwe" id="TNG-uo-AVq"/>
+                        <outlet property="tutorialButton" destination="gCk-Mw-osD" id="LbQ-Dq-hbH"/>
+                        <outlet property="tutorialView" destination="BiE-6M-0dw" id="gNz-CU-eYx"/>
+                        <segue destination="jPJ-if-ds0" kind="modal" identifier="toSecond" modalTransitionStyle="crossDissolve" id="xv4-a3-Z2F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WL5-cy-OHF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-157" y="29"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2TD-jx-9Q8">
+            <objects>
+                <viewController id="VDe-c3-bQD" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EKn-S5-Hir"/>
+                        <viewControllerLayoutGuide type="bottom" id="rsx-7y-rYG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7hZ-eB-5rJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ncx-5P-YmB" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="366" y="330"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg_start_3_5inch.png" width="640" height="960"/>
+        <image name="bg_tutorial.png" width="560" height="460"/>
+        <image name="button_score.png" width="250" height="80"/>
+        <image name="button_tutorial.png" width="250" height="80"/>
+        <image name="button_tutorial_close.png" width="100" height="100"/>
+        <image name="button_tutorial_next.png" width="160" height="60"/>
+        <image name="tutorial01.png" width="420" height="280"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

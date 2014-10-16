@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="F8g-zb-IM7">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Main Game View Controller-->
+        <scene sceneID="CtS-rA-C9T">
+            <objects>
+                <viewController restorationIdentifier="mainGameScene" storyboardIdentifier="mainGameScene" id="LVB-YS-i5n" customClass="mainGameViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TvN-0d-DFh"/>
+                        <viewControllerLayoutGuide type="bottom" id="aVg-JY-jeM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bdc-N1-crn" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="F8g-zb-IM7" kind="modal" identifier="backToStart" id="tQv-Ti-c7f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="btX-cZ-eVz" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1384" y="108"/>
+        </scene>
+        <!--Start Scene View Controller-->
+        <scene sceneID="fhJ-a0-fzj">
+            <objects>
+                <viewController restorationIdentifier="startScene" storyboardIdentifier="startScene" id="F8g-zb-IM7" customClass="StartSceneViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bHL-vs-6yF"/>
+                        <viewControllerLayoutGuide type="bottom" id="18W-pB-mJs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wsj-io-2xy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcB-5l-4UR">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="bg_start_4inch.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toSecond:" destination="F8g-zb-IM7" eventType="touchUpInside" id="LbC-55-XcL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YA3-Ga-1o8">
+                                <rect key="frame" x="165" y="456" width="125" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="button_score.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="lZn-sP-xkK" kind="modal" identifier="scoreSegue" id="5hp-B1-gbG"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_tutorial.png" translatesAutoresizingMaskIntoConstraints="NO" id="vh2-Ka-6f1">
+                                <rect key="frame" x="20" y="169" width="280" height="230"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFa-L3-ZXM">
+                                <rect key="frame" x="32" y="456" width="125" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="button_tutorial.png"/>
+                                <connections>
+                                    <action selector="TutorialButton:" destination="F8g-zb-IM7" eventType="touchUpInside" id="WiM-Bh-W19"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSJ-Yg-S65">
+                                <rect key="frame" x="120" y="344" width="80" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="button_tutorial_next.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="NextButton:" destination="F8g-zb-IM7" eventType="touchUpInside" id="pab-J6-t5N"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7GQ-tU-3gL">
+                                <rect key="frame" x="262" y="149" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="button_tutorial_close.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="CloseButton:" destination="F8g-zb-IM7" eventType="touchUpInside" id="yrl-l8-vfc"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tutorial01.png" translatesAutoresizingMaskIntoConstraints="NO" id="3I4-uO-4oU">
+                                <rect key="frame" x="55" y="196" width="210" height="140"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="PopUpTutorialView" destination="vh2-Ka-6f1" id="kJo-JB-6o4"/>
+                        <outlet property="closeButton" destination="7GQ-tU-3gL" id="WZo-6T-lAK"/>
+                        <outlet property="nextButton" destination="hSJ-Yg-S65" id="Lu9-RE-yXD"/>
+                        <outlet property="scoreButton" destination="YA3-Ga-1o8" id="Kcn-sB-ava"/>
+                        <outlet property="startButton" destination="bcB-5l-4UR" id="JXc-gn-4vg"/>
+                        <outlet property="tutorialButton" destination="gFa-L3-ZXM" id="o78-wF-cHS"/>
+                        <outlet property="tutorialView" destination="3I4-uO-4oU" id="fVo-4O-lt3"/>
+                        <segue destination="LVB-YS-i5n" kind="modal" identifier="toSecond" modalTransitionStyle="crossDissolve" id="8Kn-A0-2fM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3BJ-oY-FNU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="793" y="-411"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="rF7-go-6QJ">
+            <objects>
+                <viewController id="lZn-sP-xkK" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zm1-jS-BSI"/>
+                        <viewControllerLayoutGuide type="bottom" id="jIA-bp-l9P"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="K8p-Lo-1zK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="miu-SL-EYH" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1384" y="-704"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg_start_4inch.png" width="640" height="1136"/>
+        <image name="bg_tutorial.png" width="560" height="460"/>
+        <image name="button_score.png" width="250" height="80"/>
+        <image name="button_tutorial.png" width="250" height="80"/>
+        <image name="button_tutorial_close.png" width="100" height="100"/>
+        <image name="button_tutorial_next.png" width="160" height="60"/>
+        <image name="tutorial01.png" width="420" height="280"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <nil key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
